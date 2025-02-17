@@ -15,7 +15,7 @@ class jenkins::repo::debian (
   }
 
   exec { 'install-apt-key-for-jenkins':
-    command => 'wget -O ${keyring_local_path} ${location}/${jenkins::repo::gpg_key_filename}',
+    command => '/usr/bin/wget -O ${keyring_local_path} ${location}/${jenkins::repo::gpg_key_filename}',
   }
 
 # apt::key { 'jenkins':
