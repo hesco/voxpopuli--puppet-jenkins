@@ -23,6 +23,7 @@ class jenkins::user_setup {
   if $jenkins::manage_user {
     ensure_resource('user', $jenkins::user, {
         ensure     => present,
+        uid        => $jenkins::uid,
         gid        => $jenkins::group,
         home       => $jenkins::localstatedir,
         managehome => false,

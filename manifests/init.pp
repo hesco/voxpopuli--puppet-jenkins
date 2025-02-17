@@ -310,6 +310,7 @@ class jenkins (
   Optional[Integer] $executors                    = undef,
   Optional[Integer] $slaveagentport               = undef,
   Boolean $manage_user                            = true,
+  Integer $uid                                    = 1011,
   String $user                                    = 'jenkins',
   Boolean $manage_group                           = true,
   String $group                                   = 'jenkins',
